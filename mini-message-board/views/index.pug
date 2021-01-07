@@ -4,8 +4,15 @@ block content
   h1= title
   p Welcome to #{title}
 
+  button(onclick="move()") Add Message
+
   ul
     for message in messages
       h3 #{message.user}: 
       p #{message.text} 
       p on #{message.added}
+
+  script.
+    function move(){
+      window.location.href= '/new'
+    }
